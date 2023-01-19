@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap");
+@import "./fontawesome.min.css";
+@import "./brands.min.css";
+@import "./solid.min.css";
+/**** Colors ****/
+:root {
+  --color-gray-dark: #1a202c;
+  --color-purple: #14044d;
+  --color-purple-lighter: #37367b;
+  --color-purple-light: #716b94;
+  --color-white-gray: #c6c5d4;
+}
+/**** End ****/
+
+/**** Fix Html pre define style ****/
+* {
+  box-sizing: border-box;
+  outline: unset;
+}
+body {
+  margin: 0;
+  color: var(--color-gray-dark);
+  font-family: "Poppins", sans-serif;
+}
+p {
+  margin-bottom: unset;
+  margin-top: 4px;
+}
+ul {
+  list-style: none;
+  margin: unset;
+}
+a {
+  text-decoration: unset;
+  color: var(--color-default);
+}
+a:hover {
+  color: var(--color-purple-light) !important;
+}
+h3,
+h4,
+h5,
+h6 {
+  margin: unset;
+}
+h3 {
+  font-weight: 500;
+}
+h5 {
+  font-weight: 400;
+}
+/**** End ****/
+
+/**** Shared style ****/
+.page {
+  position: absolute;
+  background-image: url("../images/background_image.png");
+  height: 100%;
+  width: 100%;
+}
+.navbar {
+  margin-top: 24px;
+  padding-left: 48px;
+  padding-right: 48px;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+.nav {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: bold;
+}
+.nav .nav-items {
+  display: flex;
+}
+.nav-items .nav-item {
+  margin-left: 28px;
+}
+.nav-items .nav-item:nth-child(0) {
+  margin-left: 0px;
+}
+.nav-item a {
+  color: var(--color-purple);
+  position: relative;
+}
+.main {
+  margin: auto;
+  margin-top: 10px;
+  text-align: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: var(--color-purple-light);
+  border-radius: 20px;
+  bottom: 0px;
+}
+.heading h1 {
+  position: relative;
+  width: max-content;
+  margin: auto;
+  color: var(--color-purple);
+  font-size: 32px;
+}
+.heading h1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background-color: var(--color-purple-light);
+  border-radius: 20px;
+  bottom: -2px;
+}
+.custom-button {
+  padding: 8px 22px;
+  border: 2px solid var(--color-purple-light);
+  border-radius: 4px;
+}
+.custom-button:hover {
+  color: #fff !important;
+  background-color: var(--color-purple-light);
+}
+/**** End ****/
+
+/**** Home Style ****/
+.home-main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.home-main h1,
+.home-main h2 {
+  font-weight: 500;
+}
+.home-main .custom-button i {
+  font-size: 14px;
+  margin-left: 12px;
+}
+/**** End ****/
+
+/**** About Style ****/
+.services {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.service {
+  width: 20%;
+}
+.service .card {
+  padding: 8px 8px;
+  border: 2px solid var(--color-purple-light);
+  border-radius: 6px;
+  height: 100%;
+}
+.service .card p {
+  font-size: 14px;
+}
+
+.resume {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 44px;
+}
+.profile {
+  width: 30%;
+}
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+.profile h4 {
+  color: var(--color-purple);
+}
+.skills {
+  width: 50%;
+}
+.progress-bar {
+  position: relative;
+  height: 24px;
+  margin-bottom: 24px;
+  background-color: white;
+  text-align: right;
+}
+.skill {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: var(--color-purple-light);
+  border-radius: 6px;
+  text-align: left;
+  padding-left: 8px;
+  color: white;
+}
+.progress-bar span {
+  position: relative;
+  z-index: 3;
+  margin-right: 16px;
+}
+.lv {
+  width: 85%;
+}
+.vue-react {
+  width: 80%;
+}
+.rn {
+  width: 80%;
+}
+.asp {
+  width: 70%;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.socials i {
+  font-size: 22px;
+  color: var(--color-purple-light);
+}
+/**** End ****/
+
+/**** Work Style ****/
+.categories {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: 32px;
+  max-width: 50%;
+}
+.categories .category a {
+  color: var(--color-purple-light);
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.active-section {
+  color: #fff !important;
+  background-color: var(--color-purple-light);
+}
+.projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 87%;
+  margin: auto;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+.project {
+  width: calc(100% / 3);
+  margin-top: 16px;
+}
+.project .poster {
+  padding-left: 8px;
+  padding-right: 8px;
+  position: relative;
+}
+.project .poster img {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 10px #a09dae;
+}
+.project .poster:hover .content {
+  display: block;
+  cursor: pointer;
+}
+.project .poster .content {
+  position: absolute;
+  top: 0;
+  background-color: #fff;
+  width: calc(100% - 16px);
+  height: 200px;
+  text-align: center;
+  padding-top: 32px;
+  border-radius: 6px;
+  display: none;
+}
+.project .poster .content a {
+  padding: 3px 32px;
+  border-radius: unset;
+  font-size: 14px;
+  border-color: #716b94b8;
+}
+.project .poster .content h5 {
+  color: var(--color-purple-lighter);
+  margin-top: 4px;
+  margin-bottom: 40px;
+  font-size: 13px;
+}
+/**** End ****/
+
+/**** Contact Style ****/
+.details {
+  padding-left: 0 !important;
+  padding-right: 24px!important;
+}
+.details h1 {
+  margin: unset;
+  color: var(--color-purple);
+}
+.details h3 {
+  font-size: 28px;
+}
+.details p {
+  font-size: 14px;
+}
+.contact-details {
+  margin-top: 24px;
+}
+.contact-details div{
+  margin-bottom: 4px;
+}
+.contact-details i{
+  margin-right: 12px;
+}
+.contact-form {
+  padding-right: 0 !important;
+}
+.contact-form form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-bottom: 12px;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid var(--color-white-gray);
+  border-radius: 4px;
+}
+#contact form button {
+  color: #fff;
+  background-color: var(--color-purple-light);
+  border: unset;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+/**** End ****/
